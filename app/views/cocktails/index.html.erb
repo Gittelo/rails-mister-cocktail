@@ -1,17 +1,30 @@
 
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://source.unsplash.com/random');">
+  <div class="banner-content">
+    <h1>Amazing Cocktails</h1>
+    <p>Do you need to get out?</p>
+  </div>
+</div>
 
 <div style="margin-top: 90px">
   <div class="container">
-    <section id="section-one">
       <h4>Cocktails</h4>
-      <div class="row">
-        <% @cocktails.each do |cocktail| %>
-        <li> <%= link_to cocktail.name, cocktail %></li>
-        <% end %>
-    </div>
-  </section>
-      </ul>
-      <%= link_to "Create a new Cocktail", new_cocktail_path , class: "btn btn-primary"%>
 
-</div>
+      <div class="row">
+
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+              <div class="card-category">Best drinks</div>
+              <div class="card-description">
+                <h2><%= link_to cocktail.name, cocktail %></h2>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+    <hr>
+    <%= link_to "Create a new Cocktail", new_cocktail_path , class: "btn btn-primary"%>
+  </div>
 </div>

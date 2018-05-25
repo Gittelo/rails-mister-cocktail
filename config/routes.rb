@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # get 'doses/new'
   # get 'doses/create'
   # get 'doses/destroy'
-  root to: "cocktail#index"
-  resources :cocktails, only: [:new, :create, :index, :show] do
+  root to: "cocktails#index" # because we put it as a root we don't have it in the resources!
+  resources :cocktails, only: [:new, :create, :show] do
     resources :doses, only: [:new, :create, :index, :destroy]
   end
 

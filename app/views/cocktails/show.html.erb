@@ -1,9 +1,11 @@
-<h1>Cocktail </h1>
-<h2><%=@cocktail.name %></h2>
-<%= link_to "Back", cocktails_path %>
+<div style="margin-top: 90px">
+  <h1>Cocktail </h1>
+  <h2><%=@cocktail.name %></h2>
+  <%= link_to "Back", root_path %>
 
-<%= link_to "See doses of this cocktail", cocktail_doses_path(@cocktail), class: "btn btn-info"%>
+  <%= link_to "See doses of this cocktail", cocktail_doses_path(@cocktail), class: "btn btn-info"%>
 
 
 
-<%= link_to "Add a new Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-danger"%>
+  <%= link_to "Add a new Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-danger"%>
+</div>
